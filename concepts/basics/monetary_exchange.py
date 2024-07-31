@@ -1,4 +1,4 @@
-# 9: program allos user to enter a number of dollars and convert it to Euros and Japanese yen
+# 9: program allows user to enter a number of dollars and convert it to Euros and Japanese yen
 
 # =================================
 # 1 Euro: 0.920768 EUR
