@@ -30,10 +30,11 @@ while isValid == False:
                 num2 = float(input_b)
             else:
                 num2 = int(input_b)
-            break # exit loop after entering num2 and performing calculation
+            break # exit loop after entering num2
         except ValueError:
             print("Invalid input for variable num2!\n")
-        
+    
+    # performing calculations
     res = num1 * num2
     isValid = True
     
