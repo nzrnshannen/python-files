@@ -11,5 +11,5 @@ This repository serves as a practice for me. :)
 
 =======================================================================================================================
 Link of the book (softcopy): https://drive.uqu.edu.sa/_/fbshareef/files/farrell23936_1111823936_02_01_chapter01.pdf
-Note: the link above consists of the chapter 01 only ^^
+Note: the link above consists of the chapter 01 only ^^ I have the physical copy of the book!
 
