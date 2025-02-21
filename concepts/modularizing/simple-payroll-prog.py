@@ -1,6 +1,8 @@
+# NOTE: the program assumes that all employees make the same standard hourly rate
+
 # declarations
 
-PROMPT = "Enter hours worked: "
+PROMPT = "Enter hours worked: " # NOTE: RATE is expected to increase on January 1
 RATE = 13.00
 
 # start
@@ -12,7 +14,7 @@ while True:
         
         if hours > 0:
             # calculations
-            pay = hours * RATE
+            pay = hours * RATE 
             
             print("\n==============")
             print("Pay = Php" + f"{pay: .2f}")
