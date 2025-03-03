@@ -4,6 +4,9 @@ def check_str(str):
     # rev_str = str[::-1].lower()
     # return True if orig_str == rev_str else False
     
+    if str == "":
+        return True
+    
     rev_list = []
     iter = len(str)-1
     
@@ -26,3 +29,4 @@ def print_results(list):
 str_list = input("Input a series of strings separate by spaces: ").split()
 print_results(str_list)
 
+# ISSUE: should return True if string is ''
