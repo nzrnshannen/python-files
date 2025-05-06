@@ -6,9 +6,8 @@ playerName = input("Enter your name: ")
 print(f"Welcome, {playerName}!");
 
 playerScore = computerScore = 0;
-LIMIT = 5
+LIMIT = 5 # interchangeable
 game_running = True
-scored = True
 options = ['rock', 'paper', 'scissors']
 
 def generateComputerMove():
@@ -20,7 +19,7 @@ def showMoves(playerMove, computerMove):
 def showScores(playerScore, computerScore):
     print(f"{playerName}: {playerScore} | Computer: {computerScore}");
 
-def updateScore(score):
+def updateScore(score): # redundant
     return score + 1
 
 print("\n\tROCK, PAPER, SCISSORS")
@@ -60,12 +59,12 @@ while game_running:
 
         showScores(playerScore, computerScore)
         
-        if playerScore == 5 or computerScore == 5:
+        if playerScore == LIMIT or computerScore == LIMIT:
             game_running = False
     
     
-if playerMove == 'q' and (computerScore < 5 or playerScore < 5):
+if playerMove == 'q' and (computerScore < LIMIT or playerScore < LIMIT):
         print('\t---- SESSION TERMINATED ----')
 else:
-    print("-----")
-    print(f"{playerName} wins!" if playerScore == 5 else "Computer wins!")    
+    print("=================================================")
+    print(f"{playerName} wins!" if playerScore == LIMIT else "Computer wins!")    
