@@ -1,18 +1,50 @@
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 10]
-wordList = ["Shannen", "Nazareno", "cat", "apple", "Accenture"]
+# banking program
 
-evenNums = [num for num in numbers if num % 2 == 0]
-squareNums = [num * num for num in numbers]
-uppercaseWords = [word.upper() for word in wordList]
-startingLetterA = [word for word in wordList if word[0].lower() == 'a']
+def show_balance():
+    print(f"Your balance is: ${balance:.2f}")
 
-def printFunc(list_name, list):
-    print(f"{list_name}: ", end=" ")
-    for item in list:
-        print(item, end= " ")
-    print()
+def deposit():
+    amount = float(input("Enter an amount to be deposited: "))
+    
+    if amount < 0:
+        print("Not a valid amount!")
+        return 0
+    else:
+        return amount
+
+def withdraw():
+    amount = float(input("Enter amount to be withdrawn: "))
+    
+    if amount > balance:
+        print("Insufficient Funds")
+        return 0
+    elif amount < 0:
+        print("Amount must be greater than 0")
+        return 0
+    else:
+        return amount
+
+balance = 0
+is_running = True
+
+while is_running:
+    print("Banking Program")
+    print("1. Show Balance")
+    print("2. Deposit")
+    print("3. Withdraw")
+    print("4. Exit")
+    
+    choice = int(input("Enter your choice (1-4): "))
+    
+    if choice == 1:
+        show_balance()
+    elif choice == 2:
+        balance += deposit()
+    elif choice == 3:
+        balance -= withdraw()
+    elif choice == 4:
+        is_running = False 
+    else:
+        print("That is not a valid choice.")
         
-printFunc("Even numbers", evenNums)
-printFunc("Squared Numbers", squareNums)
-printFunc("Uppercase Words", uppercaseWords)
-printFunc("Words starting with letter 'a'", startingLetterA)
+print("Thank you! Have a nice day.")
