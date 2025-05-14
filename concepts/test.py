@@ -1,50 +1,21 @@
-# banking program
-
-def show_balance():
-    print(f"Your balance is: ${balance:.2f}")
-
-def deposit():
-    amount = float(input("Enter an amount to be deposited: "))
+class Employee:
+    raise_amt = 1.04
     
-    if amount < 0:
-        print("Not a valid amount!")
-        return 0
-    else:
-        return amount
-
-def withdraw():
-    amount = float(input("Enter amount to be withdrawn: "))
-    
-    if amount > balance:
-        print("Insufficient Funds")
-        return 0
-    elif amount < 0:
-        print("Amount must be greater than 0")
-        return 0
-    else:
-        return amount
-
-balance = 0
-is_running = True
-
-while is_running:
-    print("Banking Program")
-    print("1. Show Balance")
-    print("2. Deposit")
-    print("3. Withdraw")
-    print("4. Exit")
-    
-    choice = int(input("Enter your choice (1-4): "))
-    
-    if choice == 1:
-        show_balance()
-    elif choice == 2:
-        balance += deposit()
-    elif choice == 3:
-        balance -= withdraw()
-    elif choice == 4:
-        is_running = False 
-    else:
-        print("That is not a valid choice.")
+    def __init__(self, first, last, pay):
+        self.first = first
+        self.last = last
+        self.email = first + '.' + last + '@email.com'
+        self.pay = pay
         
-print("Thank you! Have a nice day.")
+    def fullname (self):
+        return '{} {}'.format(self.first, self.last)
+
+    def apply_raise(self):
+        self.pay = int(self.pay * self.raise_amt)
+    
+
+dev_1 = Employee("Shannen", "Nazareno", 50000)
+dev_2 = Employee("Prince", "Bendoy", 60000)
+
+print(dev_1.email)
+print(dev_2.email)
